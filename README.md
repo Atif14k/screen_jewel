@@ -1,3 +1,7 @@
-# screen_jewel
+#Screen Jewel 
 
-Flutter project on Wallpaper app where you can browse Cool and Awesome wallpapers and can be directly set to your home or lock screen of the phone.
+Flutter Wallpaper App 
+
+• APl integration to dynamically fetch and display wallpapers within the application 
+• Designed a user-friendly interface allowing seamless navigation and wallpaper selection. 
+• Enhanced functionality to enable users to set wallpapers directly from the app, optimizing user experience and satisfaction.
