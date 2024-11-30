@@ -5,7 +5,7 @@ import "package:http/http.dart" as http;
 import "package:screen_jewel/fullscreen.dart";
 
 class WallpaperHome extends StatefulWidget {
-  WallpaperHome({super.key});
+  const WallpaperHome({super.key});
 
   @override
   State<WallpaperHome> createState() => _WallpaperHomeState();
@@ -38,8 +38,7 @@ class _WallpaperHomeState extends State<WallpaperHome> {
     setState(() {
       page = page + 1;
     });
-    String url =
-        "https://api.pexels.com/v1/curated?per_page=80&page=" + page.toString();
+    String url = "https://api.pexels.com/v1/curated?per_page=80&page=$page";
     await http.get(Uri.parse(url), headers: {
       "Authorization":
           "XtavE9Z0ILA95ENdqIY8zVYqD8Gy3QWlyQvANOF26bvdqDu7pjs34S1s"
@@ -51,6 +50,7 @@ class _WallpaperHomeState extends State<WallpaperHome> {
     });
   }
 
+  @override
   Widget build(context) {
     return Scaffold(
         body: Column(
@@ -59,7 +59,8 @@ class _WallpaperHomeState extends State<WallpaperHome> {
             child: Container(
                 child: GridView.builder(
                     itemCount: images.length,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
                       mainAxisSpacing: 2,
                       crossAxisSpacing: 2,
                       crossAxisCount: 3,
@@ -90,9 +91,9 @@ class _WallpaperHomeState extends State<WallpaperHome> {
               height: 30,
               width: double.infinity,
               // padding: EdgeInsets.all(20),
-              margin: EdgeInsets.only(bottom: 10),
+              margin: const EdgeInsets.only(bottom: 10),
               color: Colors.white,
-              child: Center(child: Text("Load More"))),
+              child: const Center(child: Text("Load More"))),
         )
       ],
     ));

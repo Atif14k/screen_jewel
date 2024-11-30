@@ -38,9 +38,9 @@ class _FullScreenState extends State<FullScreen> {
                 height: 30,
                 width: double.infinity,
                 // padding: EdgeInsets.all(20),
-                margin: EdgeInsets.only(bottom: 10),
+                margin: const EdgeInsets.only(bottom: 10),
                 color: Colors.white,
-                child: Center(child: Text("Set Wallpaper"))),
+                child: const Center(child: Text("Set Wallpaper"))),
           )
         ],
       )),
